@@ -4,12 +4,11 @@ namespace WarriorBuilder
 {
     internal class WarriorPost
     {
-        public IWarrior warrior;
-        public WarriorPost(WarriorBuilder warriorBuilder)
+        public void WarriorPostassembly(WarriorBuilder warriorBuilder)
         {
             warriorBuilder.goToArmy();
             warriorBuilder.getWeapon();
-            warrior = warriorBuilder.trainWithWeapon();
+            warriorBuilder.trainWithWeapon();
 
         }
     }

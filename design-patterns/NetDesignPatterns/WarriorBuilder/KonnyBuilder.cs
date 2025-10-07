@@ -23,11 +23,10 @@ namespace WarriorBuilder
             Console.WriteLine(" Konny wstapił do armii");
         }
 
-        internal override IWarrior trainWithWeapon()
+        internal override void trainWithWeapon()
         {
             Console.WriteLine(" Konny jest gotowy do walki");
-            return new Konny(_name, _age);
-
+            Warrior = new Konny(_name, _age);
         }
     }
 }

@@ -12,10 +12,10 @@ namespace WarriorBuilder
             _age = age;
 
         }
-        private IWarrior Warrior { get; set; }
+        internal IWarrior Warrior { get; set; }
         internal abstract void goToArmy();
         internal abstract void getWeapon();
-        internal abstract IWarrior trainWithWeapon();
+        internal abstract void trainWithWeapon();
 
     }
 }

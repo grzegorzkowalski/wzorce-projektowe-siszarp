@@ -282,6 +282,61 @@ Zdefiniuj szablon metody w klasie bazowej ``DocumentProcessor`` i utwórz klasy p
 1. Pracownik trzeciego poziomu przetwarza dokumenty o wysokim priorytecie.
 1. Jeœli dokument nie zostanie obs³u¿ony na odpowiednim poziomie, powinien zostaæ przekazany do wy¿szego poziomu.
 
+## Assert Class
+
+### Zadanie 3
+
+1. W systemie bankowym, po za³o¿eniu nowego konta, musi ono spe³niaæ szereg rygorystycznych, domyœlnych warunków bezpieczeñstwa i statusu.
+1. Model Danych
+
+```
+public class BankAccount
+{
+    public int AccountNumber { get; set; }
+    public decimal Balance { get; set; }           // Saldo jest domyœlnie 0
+    public bool IsVerifiedByCompliance { get; set; } // Musi byæ zweryfikowane
+    public bool IsActive { get; set; }               // Musi byæ aktywne
+    public string Currency { get; set; }             // Domyœlnie "PLN"
+}
+```
+
+2. Cel
+Stwórz klasê AccountAssert, która bêdzie zawiera³a statyczn¹ metodê ShouldBeNewAndCompliant(BankAccount account).
+
+Ta metoda powinna sprawdzaæ i zawieraæ nastêpuj¹ce cztery Asercje Finansowe (u¿ywaj¹c Assert z dowolnego frameworku, np. xUnit):
+
+Saldo: Powinno wynosiæ 0 (Zero).
+
+Aktywnoœæ: Powinno byæ ustawione na True.
+
+Zgodnoœæ: Powinno byæ zweryfikowane przez dzia³ zgodnoœci (IsVerifiedByCompliance powinno byæ True).
+
+Waluta: Powinna byæ ustawiona na "PLN".
+
+3. Test do U¿ycia
+Poni¿ej masz przyk³ad testu, w którym musisz u¿yæ swojej metody asercji:
+
+```
+[Fact]
+public void NewAccount_MustPassAllComplianceChecks()
+{
+    // ARRANGE
+    var newAccount = new BankAccount
+    {
+        AccountNumber = 556789,
+        Balance = 0.00M,
+        IsVerifiedByCompliance = true,
+        IsActive = true,
+        Currency = "PLN"
+    };
+
+    // ACT & ASSERT: U¿yj metody AccountAssert.ShouldBeNewAndCompliant()
+    // [Wstaw Twój Kod Tutaj] 
+}
+```
+
+
+
 ## Dodatkowe Warsztat 1: System Zarz¹dzania Zamówieniami
 Opis Problemu
 Masz do czynienia z systemem zarz¹dzania zamówieniami, który jest Ÿle zaprojektowany. Kody odpowiedzialne za ró¿ne operacje s¹ pomieszane i mocno ze sob¹ powi¹zane, co utrudnia modyfikacjê i rozwój systemu. Celem warsztatu jest refaktoryzacja kodu, aby by³ bardziej czytelny, ³atwiejszy w utrzymaniu i zgodny z zasadami programowania obiektowego, a jednoczeœnie zastosowanie w nim ró¿nych wzorców projektowych.

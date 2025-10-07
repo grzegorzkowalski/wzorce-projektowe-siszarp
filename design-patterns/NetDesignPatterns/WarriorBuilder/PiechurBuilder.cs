@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using WarriorFactory;
 
@@ -9,6 +10,7 @@ namespace WarriorBuilder
 {
     internal class PiechurBuilder : WarriorBuilder
     {
+
         public PiechurBuilder(string name, int age) : base(name, age)
         {
         }
@@ -23,10 +25,10 @@ namespace WarriorBuilder
             Console.WriteLine(" Piechur wstapił do armii");
         }
 
-        internal override IWarrior trainWithWeapon()
+        internal override void trainWithWeapon()
         {
             Console.WriteLine(" Piechur jest gotowy do walki");
-            return new Piechur(_name, _age);
+            Warrior = new Piechur(_name, _age);
         }
     }
 }
