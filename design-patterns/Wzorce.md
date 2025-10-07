@@ -146,7 +146,7 @@ https://gist.github.com/AliA1997/b4b3e1066dd9f31a78554438ab5d61bd
 
 ### Zadanie 1
 1. Stwórz dwie klasy. Jedna ma reprezentowaæ obiekt dostêpny bez ograniczeñ, druga obiekt zastrze¿ony (dostêp ograniczony has³em).
-1. Zaprojektuj proxy, który bêdzie kontrolowaæ dostêp do plików po przez sprawdzenie czy has³o zwrócone zosta³o poprawnie.
+1. Zaprojektuj proxy, który bêdzie kontrolowaæ dostêp do plików poprzez sprawdzenie czy has³o zwrócone zosta³o poprawnie.
 1. Stwórz interfejs u¿ytkownika w konsoli, który pozwoli u¿ytkownikowi na wybór obiektu do pobrania i wprowadzenie has³a.
 1. Przetestuj aplikacjê, upewniaj¹c siê, ¿e proxy dzia³a poprawnie i kontroluje dostêp do obiektów.
 

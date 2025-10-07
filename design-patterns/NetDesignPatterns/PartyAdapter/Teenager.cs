@@ -10,7 +10,7 @@
 
         public virtual void letsParty()
         {
-            Console.WriteLine("Poproszę redbulla");
+            Console.WriteLine("Poproszę sok pomarańczowy");
         }
     }
 }
